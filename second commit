@@ -1,0 +1,82 @@
+[33m28e268c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m First Commit
+[33m820ab7d[m[33m ([m[1;31mupstream/main[m[33m, [m[1;31mupstream/HEAD[m[33m)[m Create start.md
+[33m1bc8754[m Update and rename rust-threading-assignments-final.md to Practice01=>rust-threading-assignments-final.md
+[33m46f96ad[m Rename dealing-with-multiple-threads.md to Practice02=>dealing-with-multiple-threads.md
+[33mbe9c047[m Add files via upload
+[33mac59937[m fix
+[33m7e1285b[m final project options
+[33m9aca6ee[m concurrency-graphs
+[33m3b0c8f0[m closure practice
+[33m4903b99[m mini project data fetch
+[33m39b2e6b[m reorg added simd to parallelization example
+[33m0cc80b7[m backpropogationproject
+[33md017db1[m simple testing
+[33mbacc296[m update enum assignment
+[33m1e3f67c[m enum intro update
+[33ma61e794[m assignment for module struct
+[33m090e6ae[m rename
+[33mcdf99e5[m updated system call, theory before library
+[33mcc93d54[m update assignment
+[33m1c28c25[m fix
+[33m82590bb[m routines
+[33m42de860[m Update rust-documentation-lab.md
+[33mb0ed66f[m creating doc
+[33mc39549f[m Create filesizeconverter.rs
+[33m9d9445d[m Update 03rust-closures-and-box-pointer.md
+[33m8cc3baf[m Update 01rust-higher-order-functions-idea-start.md
+[33mde3a00b[m generics+trait+closures+smartpointers+project
+[33m6a1f450[m Add files via upload
+[33m45a73cb[m enum + prompt engineering
+[33m0aa0d75[m Update 01comprehensive-rust-guide-llm-agent.md
+[33m472ec1e[m struct+io+python+agent
+[33mdf065ef[m memory management
+[33m5da26d9[m Delete Module2MemoryManagment directory
+[33m449a34e[m Update README.md
+[33m2f156e9[m memory management
+[33m546c45a[m basics not simple :)
+[33m700bcb9[m update
+[33mcd8de15[m update
+[33m4389ab1[m Update README.md
+[33mc3545eb[m Add files via upload
+[33m0d6e58e[m Rename 10SynchronisationPrimitives+ProducerConsumerPattern+LoadBalancer.md to Week10SynchronisationPrimitives+ProducerConsumerPattern+LoadBalancer.md
+[33m94398ad[m Rename 10Parallelization.md to Week10Parallelization.md
+[33m3bdf7a1[m Update README.md
+[33md5c0381[m Add files via upload
+[33m4b366f8[m Update Week9cConcurrency-Basic_UpperBasic.md
+[33ma476a10[m Add files via upload
+[33mbe3ac80[m Delete Lectures_CodeOnly/09bAtomicityExample.md
+[33mac22570[m Delete Lectures_CodeOnly/09aIntroductionToConcurrency.md
+[33ma773033[m Delete Lectures_CodeOnly/09cConcurrency-Basic_UpperBasic.md
+[33me9832ad[m Update README.md
+[33m6fe981b[m introconcurrencyatomicity
+[33m724e24b[m Update README.md
+[33me92ce36[m smart pointers, reorganized code examples
+[33md1da83e[m Update README.md
+[33m4e38a09[m securityzeroiseeverything
+[33mafccf2d[m Delete Week8SecurityCaseStudy.md
+[33m062de51[m Add files via upload
+[33mbea02bc[m Update README.md
+[33mecb4e44[m closures ready
+[33m2e3a12b[m Update README.md
+[33mac783a3[m Update README.md
+[33md1511fa[m generics+traits, ready, need to add assignments
+[33mc6a7001[m Update README.md
+[33m4736c7b[m Update README.md
+[33m7403f20[m error handling
+[33m95cb408[m Update README.md
+[33m36f67a3[m collections
+[33m6d247d1[m structenumready
+[33m9038127[m enumsmatchready
+[33m3caa004[m Update README.md
+[33m2ad1c58[m Struct ready
+[33m27351ce[m Create LinuxFileStruct+ErrorHandling.md
+[33m4d812b7[m borrow ready
+[33m4f55a09[m Rename Github <- CodeSpace.txt to CodeSpaceToGitHub.txt
+[33m7800421[m Create Github <- CodeSpace.txt
+[33m722d815[m Update main.rs
+[33mfb845f7[m Update implement.rs
+[33m49813b8[m Update mini_project0.md
+[33m4aea835[m Update Week0Fundamentals.md
+[33m35d09f2[m Update Week0Fundamentals.md
+[33m1baf63d[m Update 00introassignments.md
+[33mad09b4a[m spring2024 update start
