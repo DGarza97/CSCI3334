@@ -23,7 +23,6 @@ fn main() {
         
     }
 
-
     let mut sum = 0;
     let mut index = 0;
     while index < nums.len() {
@@ -31,7 +30,6 @@ fn main() {
         index += 1;
     }
     println!("\nSum: {sum}");
-
 
     let mut max = nums[0];
     for &num in nums.iter() {
