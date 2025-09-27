@@ -10,9 +10,7 @@ fn check_guess(guess: i32, secret: i32) -> i32 {
 
 fn main() {
     let mut secret = 10;
-
     let mut guess = 20;
-
     let mut counter = 0;
 
     loop{
@@ -31,7 +29,5 @@ fn main() {
             guess += 1;
         }
     }
-
     println!("It took {counter} guesses to find the answer!");
-
 }
