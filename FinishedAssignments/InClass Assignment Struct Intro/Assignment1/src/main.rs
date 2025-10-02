@@ -22,7 +22,7 @@ impl Student {
 
 fn main() {
     let mut student = Student::new("Antonio".to_string(), "Allied Health".to_string());
-    println!("{}'s major is: {}", student.name, student.get_major());
+    println!("Student: {} \n Major: {}", student.name, student.get_major());
     student.set_major("Computer Science".to_string());
-    println!("{}'s new major is: {}", student.name, student.get_major());
+    println!("Student: {} \n New Major: {}", student.name, student.get_major());
 }
