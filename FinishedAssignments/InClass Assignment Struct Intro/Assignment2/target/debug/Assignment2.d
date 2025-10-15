@@ -1,0 +1,1 @@
+/workspaces/CSCI3334/FinishedAssignments/InClass\ Assignment\ Struct\ Intro/Assignment2/target/debug/Assignment2: /workspaces/CSCI3334/FinishedAssignments/InClass\ Assignment\ Struct\ Intro/Assignment2/src/main.rs
