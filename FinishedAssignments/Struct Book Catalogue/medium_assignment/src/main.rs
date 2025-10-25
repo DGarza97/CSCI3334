@@ -28,7 +28,7 @@ fn load_books(filename: &str) -> Vec<Book> {
             year: parts[2].parse().unwrap(),
         });
     }
-
+    
     books
 }
 
