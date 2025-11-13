@@ -33,50 +33,36 @@ impl ShowInfo for Grad {
     }
 }
 
-enum Student {
-    Undergrad(Undergrad),
-    Grad(Grad),
+struct Enrollment<T: ShowInfo> {
+    students: Vec<T>,
 }
 
-impl ShowInfo for Student {
+impl<T: ShowInfo> ShowInfo for Enrollment<T> {
     fn show_info(&self) {
-        match self {
-            Student::Undergrad(u) => u.show_info(),
-            Student::Grad(g) => g.show_info(),
-        }
-    }
-}
-
-struct Enrollment {
-    students: Vec<Student>,
-}
-
-impl ShowInfo for Enrollment {
-    fn show_info(&self) {
-        for s in &self.students {
-            s.show_info();
+        for student in &self.students {
+            student.show_info();
         }
     }
 }
 
 fn main() {
-    let undergrad = Student::Undergrad(Undergrad {
-        name: "Daniel".into(),
-        gpa: 3.7,
-        major: "Computer Science".into(),
-    });
-
-    let grad = Student::Grad(Grad {
-        name: "Bob".into(),
-        gpa: 3.9,
-        major: "Physics".into(),
-        thesis: "Quantum Field Simulation".into(),
-    });
-
-    let enrollment = Enrollment {
-        students: vec![undergrad, grad],
+    let under_enrollment = Enrollment {
+        students: vec![
+            Undergrad { name: "Daniel".into(), gpa: 3.7, major: "Computer Science".into() },
+            Undergrad { name: "Eve".into(), gpa: 3.8, major: "Math".into() },
+        ],
     };
 
-    println!("Enrolled Students");
-    enrollment.show_info();
+    let grad_enrollment = Enrollment {
+        students: vec![
+            Grad { name: "Bob".into(), gpa: 3.9, major: "Physics".into(), thesis: "Quantum Field Simulation".into() },
+            Grad { name: "Carol".into(), gpa: 4.0, major: "Chemistry".into(), thesis: "Organic Synthesis".into() },
+        ],
+    };
+
+    println!("--- Undergrad Enrollment ---");
+    under_enrollment.show_info();
+
+    println!("\n--- Grad Enrollment ---");
+    grad_enrollment.show_info();
 }
