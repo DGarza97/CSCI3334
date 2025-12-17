@@ -6,7 +6,6 @@ use std::sync::{Arc, Mutex, mpsc};
 use std::thread;
 use std::time::{Duration, Instant};
 
-// ---------- Structs ----------
 struct FileStats {
     word_count: usize,
     line_count: usize,
@@ -26,7 +25,6 @@ enum ProcessingError {
     AnalysisError { file: String, msg: String },
 }
 
-// ---------- Thread Pool ----------
 type Job = Box<dyn FnOnce() + Send + 'static>;
 
 struct ThreadPool {
@@ -79,7 +77,6 @@ impl ThreadPool {
     }
 }
 
-// ---------- Download Books ----------
 fn download_book(url: &str, filename: &str) -> std::io::Result<()> {
     let status = Command::new("curl")
         .arg("-s")
@@ -108,7 +105,6 @@ fn download_books(ids: &[u32]) -> std::io::Result<()> {
     Ok(())
 }
 
-// ---------- File Processing ----------
 fn analyze_file(filename: &str, cancel: &Arc<Mutex<bool>>) -> FileAnalysis {
     let start = Instant::now();
     let mut errors = Vec::new();
@@ -172,7 +168,6 @@ fn analyze_file(filename: &str, cancel: &Arc<Mutex<bool>>) -> FileAnalysis {
     }
 }
 
-// ---------- Helper: Top N Characters ----------
 fn top_chars(freqs: &HashMap<char, usize>, n: usize) -> Vec<(char, usize)> {
     let mut items: Vec<(char, usize)> = freqs.iter().map(|(c, v)| (*c, *v)).collect();
     items.sort_by(|a, b| b.1.cmp(&a.1));
@@ -180,7 +175,6 @@ fn top_chars(freqs: &HashMap<char, usize>, n: usize) -> Vec<(char, usize)> {
     items
 }
 
-// ---------- Collect Files ----------
 fn collect_files(dir: &str) -> Vec<String> {
     let mut files = Vec::new();
     if let Ok(entries) = fs::read_dir(dir) {
@@ -196,9 +190,7 @@ fn collect_files(dir: &str) -> Vec<String> {
     files
 }
 
-// ---------- Main ----------
 fn main() -> std::io::Result<()> {
-    // Gutenberg book IDs to download (example 100 IDs)
     let book_ids: Vec<u32> = vec![
         1342, 11, 84, 1661, 2701, 98, 74, 76, 4300, 5200,
         345, 1232, 2591, 408, 1250, 1400, 4301, 4302, 4303, 4304,
@@ -212,11 +204,8 @@ fn main() -> std::io::Result<()> {
         4375, 4376, 4377, 4378, 4379, 4380, 4381, 4382, 4383, 4384
     ];
 
-
-    // Step 1: Download books
     download_books(&book_ids)?;
 
-    // Step 2: Setup cancellation and progress
     let cancel_flag = Arc::new(Mutex::new(false));
     let progress = Arc::new(Mutex::new(0usize));
 
@@ -230,12 +219,9 @@ fn main() -> std::io::Result<()> {
         });
     }
 
-    // Step 3: Collect files
     let files = collect_files("books");
     let total = files.len();
     println!("Discovered {} text files", total);
-
-    // Step 4: Process files in parallel
     let pool = ThreadPool::new(8);
     let results = Arc::new(Mutex::new(Vec::<FileAnalysis>::new()));
 
@@ -257,9 +243,7 @@ fn main() -> std::io::Result<()> {
     let mut pool = pool;
     pool.shutdown();
 
-    // Step 5: Print results
     let results = results.lock().unwrap();
-
     println!("\n--- Final Analysis Results ---");
     for r in results.iter() {
         println!("File: {}", r.filename);
