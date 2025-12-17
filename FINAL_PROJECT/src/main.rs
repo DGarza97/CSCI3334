@@ -68,7 +68,7 @@ impl ThreadPool {
     }
 
     fn shutdown(&mut self) {
-        self.sender.take(); // close channel
+        self.sender.take(); 
         for worker in &mut self.workers {
             if let Some(t) = worker.thread.take() {
                 let _ = t.join();
